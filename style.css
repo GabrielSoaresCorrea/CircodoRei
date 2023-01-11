@@ -1,0 +1,441 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-gray: #242424;
+    --second-gray: #2F2E28;
+    --tertiary-gray: #201F1B;
+    --dark-red: #310505;
+    --golden: #E7C550;
+
+    font-size: 62.5%;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arbutus Slab', serif;
+    background-color: var(--primary-gray);
+}
+
+/* font-family: 'Amarante', cursive;
+font-family: 'Arbutus Slab', serif;
+font-family: 'Dela Gothic One', cursive; */
+
+.wrapper {
+    width: min(100rem, 100%);
+    margin-inline: auto;
+    padding-inline: 2.4rem;
+}
+
+nav {
+    border-bottom: 1px solid var(--golden);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.scroll {
+    border-bottom: none;
+}
+
+nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .wrapper a {
+    color: #fff;
+}
+
+.logo {
+    text-decoration: none;
+    font-family: 'Dela Gothic One', cursive;
+    font-size: 3rem;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    padding-block: 3rem;
+}
+
+ul {
+    list-style: none;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li a {
+    font-size: 1.4rem;
+    color: #fff;
+    padding-inline: 1rem;
+    text-decoration: none;
+    padding-inline: 2rem;
+}
+
+.menu ul li a:hover {
+    border-bottom: 1px solid var(--golden);
+}
+
+#home {
+    margin-top: 6rem;
+}
+
+#home .wrapper {
+    padding-block: 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+                        "h h"
+                        "p img"
+                        "txt txt";
+}
+
+#home .wrapper header {  
+    grid-area: h;
+}
+
+#home .wrapper header,
+#about .wrapper header,
+#buy .wrapper header,
+#contact .wrapper header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding-block: 5rem;
+}
+
+#home .wrapper header h2,
+#about .wrapper header h2,
+#buy .wrapper header h2,
+#contact .wrapper header h2 { 
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 400;
+    width: 60rem;
+    border-bottom: 1px solid var(--golden);
+}
+
+#home .wrapper p {
+    color: #fff;
+    font-size: 2.6rem;
+    line-height: 4rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-inline: 10rem;
+    grid-area: p;
+}
+
+#home .wrapper img {
+    width: 24rem;
+    grid-area: img;
+}
+
+#home .wrapper span {
+    color: var(--golden);
+    font-family: 'Amarante', cursive;
+    font-size: 2.4rem;
+    text-align: center;
+    padding-block: 8rem;
+    grid-area: txt;
+}
+
+#about .wrapper {
+    padding-inline: 6rem;
+    padding-bottom: 6rem;
+}
+
+#about .wrapper p.sinopse {
+    color: var(--golden);
+    font-size: 1.8rem;
+    font-family: 'Amarante', cursive;
+    border: 2px solid var(--golden);
+    padding: 6rem;
+}
+
+#buy .sale {
+    background-color: var(--dark-red);
+    color: var(--golden);
+    font-size: 2rem;
+}
+
+#buy .sale svg{
+    width: 8rem;
+}
+
+#buy .sale .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#buy .sale .wrapper .time {
+    display: flex;
+    align-items: center;
+    padding-block: 3rem;
+}
+
+#buy .sale .wrapper .time svg{
+    padding-left: 4rem;
+}
+
+#buy .hard-cover {
+    background-color: var(--second-gray);
+    border-top: 1px solid var(--golden);
+}
+
+#buy .hard-cover .wrapper img {
+    width: 24rem;
+}
+
+#buy .soft-cover {
+    background-color: var(--tertiary-gray);
+    border-block: 1px solid var(--golden);
+}
+
+#buy .hard-cover .wrapper,
+#buy .soft-cover .wrapper,
+#buy .epub .wrapper{
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    padding-block: 4rem;
+}
+
+#buy .wrapper .buy-book .title {
+    font-size: 3.4rem;
+}
+
+#buy .wrapper .buy-book .price {
+    padding-block: 2rem;
+}
+
+#buy .wrapper .buy-book .sale-price {
+    font-size: 4rem;
+}
+
+#buy .wrapper .buy-book .orig-perc {
+    font-size: 3rem;
+}
+
+#buy .wrapper .buy-book .orig-perc span:first-child {
+    text-decoration: line-through;
+}
+
+#buy .wrapper .buy-book .orig-perc span:last-child {
+    color: var(--golden);
+}
+
+#buy .wrapper .buy-book .sale-price,
+#buy .wrapper .buy-book .orig-perc {
+    padding-bottom: 2rem
+}
+
+#buy .wrapper .buy-book button {
+    text-decoration: none;
+    color: var(--golden);
+    font-family: 'Arbutus Slab', serif;
+    font-size: 2rem;
+    background-color: transparent;
+    border: 1px solid var(--golden);
+    border-radius: 5rem;
+    cursor: pointer;
+    width: 18rem;
+    height: 5rem;
+}
+
+#buy .wrapper .buy-book button:hover {
+    color: var(--primary-gray);
+    background-color: var(--golden);
+}
+
+#buy .soft-cover .wrapper img {
+    width: 18rem;
+}
+
+#buy .epub {
+    background-color: var(--second-gray);
+    border-bottom: 1px solid var(--golden);
+}
+
+#buy .epub .wrapper img {
+    width: 28rem;
+}
+
+#contact .wrapper:nth-child(1) {
+    justify-content: center;
+}
+
+#contact .wrapper {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+
+#contact .wrapper .contact-text {
+    font-size: 2rem;
+}
+
+#contact .wrapper .contact-text h4 {
+    display: flex;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+#contact .wrapper .contact-text h4 svg {
+    width: 4rem;
+    padding-right: 1rem;
+}
+
+#contact .wrapper img {
+    width: 40rem;
+}
+
+footer {
+    background-color: var(--golden);
+}
+
+footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 4rem;
+}
+
+footer .wrapper a {
+    color: var(--primary-gray);
+}
+
+footer .wrapper p:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .wrapper span {
+    font-size: 1.4rem;
+}
+
+@media (max-width: 768px) {
+
+    .wrapper {
+        width: min(60rem, 100%);
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav .wrapper a {
+        font-size: 2rem;
+    }
+
+    #home .wrapper header h2,
+    #about .wrapper header h2,
+    #buy .wrapper header h2,
+    #contact .wrapper header h2 {
+        font-size: 2.4rem;
+    }
+
+    nav .wrapper .menu ul li a {
+        padding-inline: 0.4rem;
+    }
+
+    #home .wrapper header h2,
+    #about .wrapper header h2,
+    #buy .wrapper header h2,
+    #contact .wrapper header h2 {
+        width: 40rem;
+        padding-bottom: 4rem;
+    }
+
+    #home .wrapper { 
+        grid-template-areas: 
+                            "h h"
+                            "p p"
+                            "txt txt"
+                            "img img";
+    }
+
+    #home .wrapper p {
+        font-size: 2rem;
+        padding-inline: 1rem;
+    }
+
+    #home .wrapper img {
+        margin-inline: auto;
+    }
+
+    #about .wrapper {
+        padding-inline: 2rem;
+    }
+
+    #buy .sale .wrapper {
+        font-size: 1.6rem;
+    }
+
+    #buy .hard-cover .wrapper,
+    #buy .soft-cover .wrapper,
+    #buy .epub .wrapper {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    #buy .hard-cover .wrapper .buy-book button,
+    #buy .soft-cover .wrapper .buy-book button,
+    #buy .epub .wrapper .buy-book button {
+        margin-inline: auto;
+    }
+
+    #buy .hard-cover .wrapper .book-img,
+    #buy .soft-cover .wrapper .book-img,
+    #buy .epub .wrapper .book-img {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 4rem;
+    }
+
+    #buy .buy-book {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #buy .buy-book p,
+    #buy .buy-book span {
+        font-size: 70%rem;
+    }
+    
+    #about .wrapper p.sinopse {
+        padding: 1rem;
+    }
+    
+    #contact .wrapper:nth-child(2){
+        flex-direction: column;
+    }
+
+    #contact .wrapper img {
+        width: 30rem;
+        padding-top: 4rem;
+    }
+
+}
