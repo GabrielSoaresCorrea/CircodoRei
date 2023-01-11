@@ -349,13 +349,6 @@ footer .wrapper span {
         font-size: 2rem;
     }
 
-    #home .wrapper header h2,
-    #about .wrapper header h2,
-    #buy .wrapper header h2,
-    #contact .wrapper header h2 {
-        font-size: 2.4rem;
-    }
-
     nav .wrapper .menu ul li a {
         padding-inline: 0.4rem;
     }
@@ -364,7 +357,8 @@ footer .wrapper span {
     #about .wrapper header h2,
     #buy .wrapper header h2,
     #contact .wrapper header h2 {
-        width: 40rem;
+        width: 24rem;
+        font-size: 2.4rem;
         padding-bottom: 4rem;
     }
 
@@ -383,6 +377,7 @@ footer .wrapper span {
 
     #home .wrapper img {
         margin-inline: auto;
+        max-width: 100%;
     }
 
     #about .wrapper {
@@ -391,6 +386,11 @@ footer .wrapper span {
 
     #buy .sale .wrapper {
         font-size: 1.6rem;
+    }
+
+    #buy .sale .wrapper .time svg {
+        max-width: 4rem;
+        padding-left: 0;
     }
 
     #buy .hard-cover .wrapper,
@@ -433,8 +433,12 @@ footer .wrapper span {
         flex-direction: column;
     }
 
+    #contact .wrapper .contact-text {
+        font-size: 1.4rem;
+    }
+
     #contact .wrapper img {
-        width: 30rem;
+        max-width: 100%;
         padding-top: 4rem;
     }
 
